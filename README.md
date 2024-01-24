@@ -43,7 +43,7 @@ Se abrirá el panel de wampserver donde seleccionaremos la carpeta que movimos a
 
 ## 🖥 Lenguajes utilizados
 ![R (1)](https://github.com/PaulinaMales/MbyteSoluciones/assets/87955476/4f108baa-6461-475f-8f4a-d2114d0df31a)
-![OIP (2)](https://github.com/PaulinaMales/MbyteSoluciones/assets/87955476/81a7d1de-9cd0-4e88-8b2b-35a37077de4e)
+![OIP (3)](https://github.com/PaulinaMales/MbyteSoluciones/assets/87955476/3f4314a4-b3de-4f55-869c-819a05a811e5)
 ![056bcc_html-5_news (1)](https://github.com/PaulinaMales/MbyteSoluciones/assets/87955476/23e59209-8395-42fe-a57d-a9505922a7aa)
 
 
