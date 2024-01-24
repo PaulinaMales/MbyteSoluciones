@@ -12,15 +12,29 @@ https://mbytesoluciones.com/
 URL
 
 ## ⚙ Manual de instalacion
-Para instalar el proyecto del componente frontend, se deben realizar los siguientes pasos:
+Este proyecto no fue hecho sobre algun framework específico fue desarrollado con javascript y php puro en una plantilla de diseño Bootstrap, por lo que para hacer uso del mismo se debe probar localmente con algún servidorlocal de preferencia o alguna extensión de Visual Studio en esta caso mostrare los pasos para iniciar el programa con wampserver:
 
-Descargar el comprimido ZIP
-[Descargar ZIP](https://github.com/Lesly-liseth/Odontoarias/archive/refs/heads/master.zip)
+## Paso 1:
+Descargar WampServer en el siguiente enlace: 
+```bash
+  https://sourceforge.net/projects/wampserver/
+```
+## Paso 2:
+Instalar Wampserver con toda las configuraciones predeterminadas que suele indicar, finalmente podemos verificar que exista la carpeta wamp64 en nuestro disco local "C".
+## Paso 3:
+Una vez instalado podemos levantar el servidor local de wampserver.
+## Paso 4:
+📥 Descargar el ZIP comprimido:
+[Descargar ZIP](https://github.com/PaulinaMales/MbyteSoluciones/archive/refs/heads/master.zip)
 
-
-
-## 🖥️ Iniciar el proyecto
-
+## Paso 5:
+Descomprimir la carpeta y copiarla a la carpeta wamp64/www/.
+## Paso 6:
+Ingresar al Navegador de preferencia y colocar 
+```bash
+  localhost
+```
+Se abrirá el panel de wampserver donde seleccionaremos la carpeta que movimos a la ruta mencionada anteriormente y podremos visualizar el proyecto.
 
 ## 📝 Autores
 - Frontend [**Paulina Males**](https://github.com/PaulinaMales) [Frontend](https://github.com/PaulinaMales/MbyteSoluciones)
