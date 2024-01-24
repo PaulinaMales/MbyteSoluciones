@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../img/logo_mbyte.png">
+    <title>Administrador</title>
+    <!-- Simple bar CSS -->
+    <link rel="stylesheet" href="css/simplebar.css">
+    <!-- Fonts CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Icons CSS -->
+    <link rel="stylesheet" href="css/feather.css">
+    <link rel="stylesheet" href="css/select2.css">
+    <link rel="stylesheet" href="css/dropzone.css">
+    <link rel="stylesheet" href="css/uppy.min.css">
+    <link rel="stylesheet" href="css/jquery.steps.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/quill.snow.css">
+    <!-- Date Range Picker CSS -->
+    <link rel="stylesheet" href="css/daterangepicker.css">
+    <!-- App CSS -->
+    <link rel="stylesheet" href="css/app-light.css" id="lightTheme" disabled>
+    <link rel="stylesheet" href="css/app-dark.css" id="darkTheme">
+      <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="../img/logo_mbyte.png" type="image/x-icon">
+    <link rel="icon" href="../img/logo_mbyte.png" type="image/x-icon">    
+	<script src="consumo/verificarInicioSesion.js"></script>
+
+  </head>
+  <body class="vertical  dark  ">
+    <div class="wrapper">
+      <nav class="topnav navbar navbar-light">
+        <button type="button" class="navbar-toggler text-muted mt-2 p-0 mr-3 collapseSidebar">
+          <i class="fe fe-menu navbar-toggler-icon"></i>
+        </button>
+
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link text-muted my-2" href="#" id="modeSwitcher" data-mode="dark">
+              <i class="fe fe-sun fe-16"></i>
+            </a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-muted pr-0" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="avatar avatar-sm mt-2">
+                <img src="./assets/avatars/avatar-1.png" alt="..." class="avatar-img rounded-circle">
+              </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="perfil.php">Perfil</a>
+			  <button class="dropdown-item"  type="button" onclick="cerrarSesion()">Cerrar Sesión</button>
+			 </div>
+          </li>
+        </ul>
+      </nav>
+      <aside class="sidebar-left border-right bg-white shadow" id="leftSidebar" data-simplebar>
+        <a href="#" class="btn collapseSidebar toggle-btn d-lg-none text-muted ml-2 mt-3" data-toggle="toggle">
+          <i class="fe fe-x"><span class="sr-only"></span></i>
+        </a>
+        <nav class="vertnav navbar navbar-light">
+          <!-- nav bar -->
+          <div class="w-100 mb-4 d-flex">
+            <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="index.html">
+              <img src="../img/logo_mbyte.png" alt="" width="50px">
+            </a>           
+          </div>
+          <ul class="navbar-nav flex-fill w-100 mb-2">
+            <li class="nav-item dropdown">
+              <a class="dropdown-toggle nav-link" href="index.html">
+                <i class="fe fe-home fe-16"></i>
+                <span class="ml-3 item-text">Dashboard</span>
+              </a> 
+            </li>           
+          </ul>
+          <p class="text-muted nav-heading mt-4 mb-1">
+            <span>Tienda</span>
+          </p>
+          <ul class="navbar-nav flex-fill w-100 mb-2">
+            <li class="nav-item dropdown">
+              <a class="dropdown-toggle nav-link" href="productos.html">
+                <i class="fe fe-box fe-16"></i>
+                <span class="ml-3 item-text">Productos</span>
+              </a> 
+            </li>
+            <li class="nav-item dropdown">
+              <a class="dropdown-toggle nav-link" href="pedidos.html">
+                <i class="fe fe-shopping-cart"></i>
+                <span class="ml-3 item-text">Pedidos</span>
+              </a> 
+            </li> 
+
+            <li class="nav-item dropdown">
+              <a href="categorias.html"class="dropdown-toggle nav-link">
+                <i class="fe fe-clipboard fe-16"></i>
+                <span class="ml-3 item-text">Categorías</span>
+              </a>
+            </li>                      
+          </ul>
+          <p class="text-muted nav-heading mt-4 mb-1">
+            <span>Clientes</span>
+          </p>
+          <ul class="navbar-nav flex-fill w-100 mb-2">
+            <li class="nav-item dropdown">
+              <a href="clientes.html" class="dropdown-toggle nav-link">
+                <i class="fe fe-user fe-16"></i>
+                <span class="ml-3 item-text">Lista Clientes</span>
+              </a>
+            </li>
+            <!--<li class="nav-item w-100">
+              <a class="nav-link" href="calendario.html">
+                <i class="fe fe-calendar fe-16"></i>
+                <span class="ml-3 item-text">Calendario</span>
+              </a>
+            </li>-->
+          </ul>
+        </nav>
+      </aside>
+      <main role="main" class="main-content">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <h2 class="page-title">PEDIDOS</h2>
+              <p class="lead text-muted">Pedidos realizados por los clientes.</p>
+              <div class="row">
+				<div class="col-md-12">
+				  <div class="card shadow" style="padding:20px">
+					<div class="row mb-3">
+						<div class="col-md-4">
+							<label for="fechaInicio">Fecha de Inicio:</label>
+							<input type="date" class="form-control" id="fechaInicio">
+						</div>
+						<div class="col-md-4">
+							<label for="fechaFin">Fecha de Fin:</label>
+							<input type="date" class="form-control" id="fechaFin">
+						</div>
+						<div class="col-md-4">
+							<label>&nbsp;</label>
+							<button class="btn btn-secondary btn-block" onclick="buscarPedidosPorFecha()">Buscar</button>
+						</div>
+					</div>
+				  </div>
+				</div>
+                <div class="col-md-12">
+                  <div class="card shadow">
+                    <div class="card-body">
+                      <ul class="nav nav-pills nav-fill mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-all-tab" data-toggle="pill" href="#pills-all" role="tab" aria-controls="pills-all" aria-selected="true">Todos</a>
+                        </li>                         
+                        <li class="nav-item">
+                          <a class="nav-link " id="pills-pen-tab" data-toggle="pill" href="#pills-pen" role="tab" aria-controls="pills-pen" aria-selected="true">Pendientes</a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-fi-tab" data-toggle="pill" href="#pills-fi" role="tab" aria-controls="pills-fi" aria-selected="false">Finalizados</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-an-tab" data-toggle="pill" href="#pills-an" role="tab" aria-controls="pills-an" aria-selected="false">Anulados</a>
+                        </li>
+                                             
+                      </ul>
+                      <div class="tab-content mb-1" id="pills-tabContent">
+                          <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab"> 
+                            <!-- simple table -->
+                            <div class="col-md-12">
+                              <div class="card shadow">
+                                <div class="card-body">
+                                  <table class="table table-hover" id="tabla_pedidos_todos">
+                                    <thead>
+                                      <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Celular</th>
+                                        <th>Fecha</th>
+                                        <th>Estado</th>
+                                        <th>Acción</th>                                       
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+									<!-- Aquí se iran agregando dinamicamente -->
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div> <!-- simple table -->         
+                         
+                          </div>
+                        <div class="tab-pane fade" id="pills-pen" role="tabpanel" aria-labelledby="pills-pen-tab"> 
+                          
+                            <!-- simple table -->
+                            <div class="col-md-12">
+                              <div class="card shadow">
+                                <div class="card-body">
+                                  <table class="table table-hover" id="tabla_pedidos_pendientes">
+                                    <thead>
+                                      <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Celular</th>
+                                        <th>Fecha</th>
+                                        <th>Estado</th>
+                                        <th>Acción</th>                                       
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div> <!-- simple table -->                            
+                        </div>
+
+                         <div class="tab-pane fade" id="pills-fi" role="tabpanel" aria-labelledby="pills-fi-tab"> 
+                         
+                            <!-- simple table -->
+                            <div class="col-md-12">
+                              <div class="card shadow">
+                                <div class="card-body">
+                                  <table class="table table-hover" id="tabla_pedidos_finalizados">
+                                    <thead>
+                                      <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Celular</th>
+                                        <th>Fecha</th>
+                                        <th>Estado</th>
+                                        <th>Acción</th>                                       
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div> <!-- simple table -->                           
+                         </div>
+                         <div class="tab-pane fade" id="pills-an" role="tabpanel" aria-labelledby="pills-an-tab"> 
+                          
+                            <!-- simple table -->
+                            <div class="col-md-12">
+                              <div class="card shadow">
+                                <div class="card-body">
+                                  <table class="table table-hover" id="tabla_pedidos_anulados">
+                                    <thead>
+                                      <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Celular</th>
+                                        <th>Fecha</th>
+                                        <th>Estado</th>
+                                        <th>Acción</th>                                       
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div> <!-- simple table -->                              
+                         </div>                                                
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div> <!-- end section -->
+            </div> <!-- .col-12 -->
+          </div> <!-- .row -->
+        </div> <!-- .container-fluid -->
+                            <!-- PEDIDO MODAL-->
+                            <div class="modal fade" id="pedidoModal" tabindex="-1" role="dialog" aria-labelledby="varyModalLabel" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="varyModalLabel">Procesar Pedido</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    
+                                  </div>
+                                  <div class="card shadow">
+
+                                    <div class="card-body">
+                                        <strong class="card-title">Detalles de compra</strong>
+										<!-- Crear una tabla para motrar los detalles del pedido -->
+											<table class="table">
+												<thead>
+													<tr>
+														<th>Producto</th>
+														<th>Unidades</th>
+														<th>Precio Unitario</th>
+														<th>Total</th>
+													</tr>
+												</thead>
+												<tbody id="detallePedidoBody">
+													<!-- Aquí se llenarán los detalles del pedido dinámicamente -->
+												</tbody>
+											</table>
+
+											<hr>
+											<!-- Shiping Details -->
+											<div class="shiping-details">
+													<div><strong>¿Desea con Envío a Domicilio?</strong></div>
+												<div class="checkbox">
+													<label>
+													<input type="checkbox" id="direccionCheckbox"> Sí deseo.
+													</label>
+												</div>
+												<div id="hiddenText">
+													<p style="color:red"></p>
+												</div>
+											</div>
+											<!-- /Shiping Details -->
+											<!-- Order notes -->
+											<div class="order-notes">
+												<div><strong>Observación</strong></div>
+												<p>Especifíque una dirección, detalle o duda que tenga sobre la compra o el valor a pagar.</p>
+													<textarea class="form-control" placeholder="Order Notes" id="observacion" disabled></textarea>
+											</div>
+											<!-- /Order notes -->
+											<br>
+											<div class="payment-method">
+												<div><strong>Forma de pago</strong></div>
+
+													<div class="radio">
+														<label>
+															<input type="radio" name="optradio" id="transferencia" disabled>
+															Transferencia Bancaria
+														</label>							
+													</div>
+													<div class="radio">
+														<label>
+															<input type="radio" name="optradio" id="efectivo" disabled>
+															Pago en Efectivo
+														</label>							
+													</div>
+											</div>
+											<hr>                                 
+                                      <div class="card-header">
+                                        <strong class="card-title">Total Compra: $</strong>
+										<span id="totalCompra"> <strong></strong></span>
+                                      </div> 
+                                      <br>
+										<div class="payment-method">
+											<div><strong>Estado de pago:</strong></div>
+											<br>
+											<div class="radio">
+												<label>
+													<input type="radio" id="anuladoRadio" name="optradio" value="Anulado">
+													Anulado
+												</label>
+											</div>
+											<div class="radio">
+												<label>
+													<input type="radio" id="finalizadoRadio" name="optradio" value="Finalizado">
+													Finalizado
+												</label>
+											</div>
+										</div>
+                                    </div>
+                                                                                            
+                                  </div>                                  
+                                  <div class="modal-footer">         
+                                    <button type="button" class="btn mb-2 btn-secondary" data-dismiss="modal">Salir</button>
+                                    <button type="button" class="btn mb-2 btn-success" onclick="crearEstadoPedido()">Guardar Estado <i class="fe fe-check-square fe-16"></i></button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div> 
+	<!-- Modal para mensajes exitosos -->
+	<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="titulo"></h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			<p id="mensaje"></p>
+		  </div>
+		 <!-- <div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+		  </div>-->
+		</div>
+	  </div>
+	</div> 	
+      </main> <!-- main -->
+    </div> <!-- .wrapper -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/simplebar.min.js"></script>
+    <script src='js/daterangepicker.js'></script>
+    <script src='js/jquery.stickOnScroll.js'></script>
+    <script src="js/tinycolor-min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/d3.min.js"></script>
+    <script src="js/topojson.min.js"></script>
+    <script src="js/datamaps.all.min.js"></script>
+    <script src="js/datamaps-zoomto.js"></script>
+    <script src="js/datamaps.custom.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script>
+      /* defind global options */
+      Chart.defaults.global.defaultFontFamily = base.defaultFontFamily;
+      Chart.defaults.global.defaultFontColor = colors.mutedColor;
+    </script>
+    <script src="js/gauge.min.js"></script>
+    <script src="js/jquery.sparkline.min.js"></script>
+    <script src="js/apexcharts.min.js"></script>
+    <script src="js/apexcharts.custom.js"></script>
+    <script src='js/jquery.mask.min.js'></script>
+    <script src='js/select2.min.js'></script>
+    <script src='js/jquery.steps.min.js'></script>
+    <script src='js/jquery.validate.min.js'></script>
+    <script src='js/jquery.timepicker.js'></script>
+    <script src='js/dropzone.min.js'></script>
+    <script src='js/uppy.min.js'></script>
+    <script src='js/quill.min.js'></script>
+
+    <script>
+      var uptarg = document.getElementById('drag-drop-area');
+      if (uptarg)
+      {
+        var uppy = Uppy.Core().use(Uppy.Dashboard,
+        {
+          inline: true,
+          target: uptarg,
+          proudlyDisplayPoweredByUppy: false,
+          theme: 'dark',
+          width: 770,
+          height: 210,
+          plugins: ['Webcam']
+        }).use(Uppy.Tus,
+        {
+          endpoint: 'https://master.tus.io/files/'
+        });
+        uppy.on('complete', (result) =>
+        {
+          console.log('Upload complete! We’ve uploaded these files:', result.successful)
+        });
+      }
+    </script>
+    <script src="js/apps.js"></script>
+	<script src="consumo/pedidos.js"></script>
+  </body>
+</html>
