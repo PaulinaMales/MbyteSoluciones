@@ -42,9 +42,10 @@ Se abrirá el panel de wampserver donde seleccionaremos la carpeta que movimos a
 - App Móvil [**Marcos Moreira**](https://github.com/Marcsucre25) [App Móvil](https://github.com/Marcsucre25/mbyte)
 
 ## 🖥 Lenguajes utilizados
-![OIP](https://github.com/PaulinaMales/MbyteSoluciones/assets/87955476/f573a072-6c84-43b5-b35c-c16e5f771377)
-![R](https://github.com/PaulinaMales/MbyteSoluciones/assets/87955476/da057e17-59ba-4141-a4c7-70900f598ba5)
-![056bcc_html-5_news](https://github.com/PaulinaMales/MbyteSoluciones/assets/87955476/7d1f2bfd-65fc-46b2-b8d1-842c5fd45e93)
+![R (1)](https://github.com/PaulinaMales/MbyteSoluciones/assets/87955476/908b3e4b-58da-4dfd-bd95-c30fad110b47)
+![OIP (1)](https://github.com/PaulinaMales/MbyteSoluciones/assets/87955476/6501ff13-cc32-499e-bfbb-57327b7caf29)
+![056bcc_html-5_news (1)](https://github.com/PaulinaMales/MbyteSoluciones/assets/87955476/0b74a9b5-e3a6-4ce9-84ab-2ae762bf7ddd)
+
 
 
 
