@@ -2,20 +2,21 @@
 
 ![fondo](https://github.com/PaulinaMales/MbyteSoluciones/assets/87955476/c5ec75f8-e595-4f74-a22e-bef97c0dd9ba)
 
-## 📚📖 Descripción general
-El presente proyecto se enfoca en la creacion del componente frontend de la aplicacion web, el cual se ha diseñado para ofrecer una experiencia de usuario sobresaliente. Además de asegurar su operatividad precisa y su capacidad para adaptarse, se ha establecido una solida conexion con el backend, permitiendo asi que los usuarios con diferentes roles puedan ingresar a los modulos establecidos para cada uno de ellos
+## 📝 Descripción 
+El presente proyecto se presenta el resultado final del desarrollo del componente frontend como solución a la gestión de ventas tradicional que manejaba la microempresa "Mbyte Soluciones Tecnológicas", digitalizando su manejo y forma de mostrar los productos y servicios que ofrece la misma teniendo un mayor alcance brindando una mejor atención al cliente y facilitando la gestión de venta.
 
 ## 🔗🌎 Enlace del proyecto desplegado
 https://mbytesoluciones.com/
 
-## 🔗📑 Enlace para el Manual de usuario
+## 🔗📖 Enlace para el Manual de usuario
 URL
 
-## 💻📥 Manual de instalacion
+## ⚙ Manual de instalacion
 Para instalar el proyecto del componente frontend, se deben realizar los siguientes pasos:
 
 Descargar el comprimido ZIP
-[Desacargar ZIP](https://github.com/Lesly-liseth/Odontoarias/archive/refs/heads/master.zip)
+[Descargar ZIP](https://github.com/Lesly-liseth/Odontoarias/archive/refs/heads/master.zip)
+
 
 
 ## 🖥️ Iniciar el proyecto
